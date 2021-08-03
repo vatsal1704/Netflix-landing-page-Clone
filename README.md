@@ -14,3 +14,8 @@ IDE used:
   
 This page is fully responsive for all mobile and tablet devices too.
 
+Have a look at the project here:
+
+https://vatsal1704.github.io/Netflix-landing-page-Clone/
+
+<img src= ""
