@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 5%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100; 
+}
+
+.navbar-brand{
+    width: 100px ;
+    height: 100%;
+    
+}
+
+.brand-logo{
+    width: 100%;
+    height: 100%;
+}
+
+.language-dropdown{
+    background: transparent;
+    border: none;
+    color: white;
+    
+}
+
+.language-dropdown:focus{
+    outline: none;
+}
+
+
+
+.dropdown-container{
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: .4rem;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+
+.btn{
+    background-color:#dc030f;
+    border: 1px solid #dc030f;
+    color: white;
+    padding: .25rem .5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.navbar-nav-items{
+    display: flex;
+   gap: 10px;
+}
+
+
+.hero-bg-image{
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-bg-image-container{
+    width: 100%;
+    height: 80vh;
+
+}
+
+.hero-bg-overlay{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient( to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100% );
+}
+
+.hero-card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 20%;
+}
+
+
+.hero-title{
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.hero-subtitle,
+.hero-description{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+
+.hero-description{
+    margin: 0 42px;
+
+}
+.email-input{
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    padding-left: 7px;
+
+}
+
+.email-label{
+    color: black;
+    position: absolute;
+    top: 28%;
+    left: 2%;
+    color: rgb(153, 149, 149);
+    transition: 0.5s;
+}
+.email-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-container{
+    background-color: white;
+    width: 90%;
+    height: 50px;
+    position: relative;
+
+}
+
+.email-input:focus + .email-label{
+    top: 0.2rem;
+    font-size: 10px;
+
+}
+
+.email-input:not(:placeholder-shown).email-input:not(:focus) + .email-label{
+    top: 0.2rem;
+    font-size: 10px;
+}
+
+
+.email-input:focus-visible{
+    outline: none;
+}
+
+.primary-btn{
+    background-color:#dc030f;
+    border: 1px solid #dc030f;
+    color: white;
+    padding: .8rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+
+.feature{
+    border-top: 8px solid #222;
+    padding: 2rem 1rem;
+}
+
+.feature-title{
+    font-weight: 600;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+
+.feature-subtitle{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.feature-details{
+    text-align: center;
+}
+
+
+.feature-img-container{
+    width: 100%;
+    position: relative;
+
+}
+.feature-img{
+    width: 100%;
+}
+.feature-bg-video-container{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    z-index: -2;
+    height: 100%;
+    max-width: 75%;
+    max-height: 54%;
+    left: 12%;
+}
+
+.feautre-bg-video{
+    width: 100%;
+}
+
+
+.feature2-poster-container{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 16em;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border: 2px solid rgba(255,255,255,.25);
+    border-radius: 11px;
+    height: 60px;
+    padding: 0.25rem 0.6rem;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.poster-container{
+    width: 20%;
+   
+}
+
+.poster{
+    position: absolute;
+        width: 17%;
+        height: 85%;
+        top: 6%;
+        position: absolute;
+}
+
+.poster-details{
+    width: 60%;
+}
+
+
+.poster-details > h4{
+    font-size: 13px;
+    font-weight: 500;
+}
+.poster-details > h6{
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(54, 54, 223);
+}
+
+
+.gif-container{
+    width: 20%;
+    height: 100%;
+}
+
+.gif{
+    width: 100%;
+    height: 100%;
+}
+
+.feature3-bg-video-container{
+    max-width: 63%;
+    max-height: 47%;
+    z-index:-2;
+    top: 9%;
+    left: 19%;
+}
+
+.faq-accordian{
+    width: 100%;
+}
+.faq-list-container{
+    border-top: 8px solid #222;
+    padding: 2rem 0;
+}
+.faq-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.faq-heading{
+    font-size: 23px;
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 3rem;
+}
+
+.faq-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: #303030;
+    border: 1px solid #303030;
+    color: white;
+}
+
+
+.faq-visible{
+    background-color: #303030;
+    border-top: 1px solid black;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+.faq-visible >p{
+    margin: 1rem;
+} 
+
+.get-started-email{
+    width: 100%;
+    
+}
+
+.get-started-email >h4{
+    margin: 2rem 0;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.fa-plus:before {
+    content: "\f067";
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.fa-times::before {
+    content: "";
+    font-size: 25px;
+    font-weight: 300;
+}
+
+footer{
+    border-top: 8px solid #333;
+    padding: 2rem 1rem;
+    color: #757575;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 12px;
+
+}
+
+.footer__row__1 >h4{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.footer__row__2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+   
+}
+
+.footer__row__3 > .dropdown-container{
+    width: fit-content;
+    border: 1px solid #757575;
+    color: #757575;
+}
+
+.footer__row__3  .dropdown-container .language-dropdown{
+ color: #757575;
+}
+
+
+
+
+
+
+/* Media Queries */
+
+@media (min-width:768px) {
+    .hero-bg-image-container{
+        height: 100vh;
+    }
+
+    .hero-bg-overlay{
+        height: 100vh;
+    }
+    .hero-card{
+        top: 40%;
+        left: 30%;
+    transform: translate(-20%, -20%);
+    }
+    .hero-title{
+        font-size: 3.2rem;
+    }
+    .hero-subtitle,
+    .hero-description{
+        font-weight: 400;
+        font-size: 1.3rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle, .hero-description {
+        font-weight: 400;
+        font-size: 1.3rem;
+    }
+
+    .hero-description {
+        margin: 0 5px;
+    }
+
+    .feature{
+        padding: 4rem;
+    }
+
+    .feature-title{
+        font-size: 35px;
+    }
+
+    .feature-subtitle{
+        font-size: 20px;
+    }
+
+    .feature2-poster-container{
+        max-width: 25em;
+        width: 26em;
+        height: 85px;
+    }
+
+    .poster-contianer{
+    width: 15%;
+    }
+
+    .gif-container{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .poster-details >h4{
+        font-size: 18px;
+    }
+    .poster-details >h6{
+        font-size: 14px;
+    }
+
+    .faq-list{
+        padding: 1rem 5rem;
+    }
+
+    .faq-title{
+        font-size: 22px;
+   
+
+    }
+
+    .get-started-email{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(16%);
+    }
+}
+
+
+@media (min-width:1024px) {
+    .navbar{
+        padding: 2% 5%;
+    }
+    .navbar-brand{
+        width: 150px;
+    }
+    .btn{
+        padding: 6px 16px;
+        font-size: 17px;
+    }
+    .hero-title{
+        font-size: 3.05rem;
+    }
+    .dropdown-container{
+        padding: 5px 5px;
+        font-size: 18px;
+
+    }
+    .navbar-nav-items{
+        gap: 30px;
+    }
+    .hero-card{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .primary-btn{
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+        width: 220px;
+        font-size: 29px;   
+    }
+
+    .form-container{
+        width:50%;  
+    }
+
+    .faq-heading{
+        font-size: 38px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .email-form-container{
+        flex-direction: row;
+        align-items: center;
+        gap: 1px;
+    }
+    
+    .email-input{
+        width: 100%;
+        height: 72px;
+       font-size: 20px;
+    } 
+
+     .email-form-container {
+        width: 117%;
+        position: relative;
+        right: 8%;
+    } 
+
+
+    .form-container {
+        background-color: white;
+        width: 60%;
+        height: 69px;
+        position: relative;
+        padding-left: 3px;
+    }
+
+      .hero-subtitle {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    .hero-description{
+        font-size: 1.1rem;
+        font-weight: 380;
+    }
+
+    .brand-logo {
+        width: 124%;
+    }
+
+    .feature:nth-child(even){
+        flex-direction: row-reverse;
+        
+    }
+
+
+    .feature-details{
+        text-align: left;
+        padding: 0 6rem;
+        
+     }
+
+     .feature{
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 20px;
+     }
+
+    .feature-img{
+        max-width: 600px;
+    }
+
+
+    .feature-title{
+        font-size: 50px;
+    }
+
+    .feature-subtitle{
+        font-size: 25px;
+    }
+
+    .feature-img-container{
+        max-width: 500px;
+    }
+
+    .feature2-poster-container{
+         max-width: 20em;
+        height: 100px;
+        padding: 1rem;
+    }
+
+    .poster-container{
+        width: 20%;
+    }
+
+    .faq-list{
+        padding:1rem 25rem;
+    }
+
+    .get-started-email{
+        transform: translateX(16%);
+    }
+
+    footer{
+        padding: 2rem 20rem;
+        justify-content: flex-start;
+        text-align: left;
+        align-items: flex-start;
+        padding: 2rem 25rem;
+    }
+
+    .footer__row__2{
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items:flex-start;
+    }
+
+    .footer__row__1 , .footer__row__3 , .footer__row__4 {
+        align-self: flex-start;
+    }
+}
